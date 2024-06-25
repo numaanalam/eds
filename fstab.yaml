@@ -1,5 +1,5 @@
 mountpoints:
   /:
-    url: "https://author-p136764-e1377422.adobeaemcloud.com/bin/franklin.delivery/numaanalam/eds/main"
+    url: "https://author-p136667-e1377506.adobeaemcloud.com/bin/franklin.delivery/numaanalam/eds/main"
     type: "markup"
     suffix: ".html"
