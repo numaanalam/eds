@@ -204,6 +204,13 @@
          "value": ""
        },
        {
+        "component": "text",
+        "valueType": "string",
+        "name": "href",
+        "value": "",
+        "label": "Link"
+      },
+       {
         "component": "reference",
         "valueType": "string",
         "name": "image",
