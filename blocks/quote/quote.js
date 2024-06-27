@@ -5,7 +5,8 @@ export default function decorate(block) {
   blockquote.textContent = "Prasad";
   quoteWrapper.replaceChildren(blockquote);
 
+  const [quoteWrapper1] = block.children;
   const blockquote1 = document.createElement('blockquote1');
   blockquote1.textContent ="Shivam";
-  quoteWrapper.replaceChildren(blockquote1);
+  quoteWrapper1.replaceChildren(blockquote1);
 }
