@@ -23,6 +23,7 @@ export default function decorate(block) {
         <p>Response ID: ${json.id}</p>
         <p>First Name: ${json.fname}</p>
         <p>Last Name: ${json.lname}</p>`;
+        <input type="submit" value="Submit"></input>
 
       quoteWrapper.replaceChildren(blockquote);
     }
