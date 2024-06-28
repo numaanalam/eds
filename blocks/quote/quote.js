@@ -18,6 +18,8 @@ export default function decorate(block) {
       const blockquote = document.createElement("blockquote");
       blockquote.innerHTML = `
         <p>Form submitted successfully!</p>
+
+        <input type="text" id="lname" name="lname">
         <p>Response ID: ${json.id}</p>
         <p>First Name: ${json.fname}</p>
         <p>Last Name: ${json.lname}</p>`;
