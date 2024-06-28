@@ -7,6 +7,6 @@ export default function decorate(block) {
 
 
   const blockquote1 = document.createElement('blockquote1');
-  blockquote1.textContent = "Alam";
+  blockquote1.textContent = quoteWrapper1.textContent.trim();
   quoteWrapper1.replaceChildren(blockquote1);
 }
