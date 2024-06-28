@@ -1,23 +1,25 @@
+/* File: styles.css */
+ 
 .block.quote {
-  background-color: rgb(141, 146, 5);
-  padding: 0 0 35px;
+  background-color: green;
+  padding: 0 0 24px;
   display: flex;
   flex-direction: column;
   margin: 1rem 0;
 }
-
+ 
 .block.quote blockquote {
   margin: 16px;
   text-indent: 0;
 }
-
+ 
 .block.quote > div:last-child > div {
   margin: 0 16px;
-  font-size: large;
-  font-style:normal;
-  position: center;
+  font-size: small;
+  font-style: italic;
+  position: relative;
 }
-
+ 
 .block.quote > div:last-child > div::after {
   content: "";
   display: block;
