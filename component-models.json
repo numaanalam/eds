@@ -202,28 +202,8 @@
          "name": "author",
          "label": "Author",
          "value": ""
-       },
-       {
-        "component": "text",
-        "valueType": "string",
-        "name": "href",
-        "value": "",
-        "label": "Link"
-      },
-      {
-        "component": "richtext",
-        "name": "text",
-        "value": "",
-        "label": "Text",
-        "valueType": "string"
-      },
-       {
-        "component": "reference",
-        "valueType": "string",
-        "name": "image",
-        "label": "Image",
-        "value": ""
-      }
+       }
+      
      ]
   }  
 ]
