@@ -9,6 +9,7 @@
 
 .block.teaser.bg p {
   margin: 0;
+  color: white;
 }
 
 .block.teaser.bg img {
@@ -20,9 +21,9 @@
 }
 
 .block.teaser.fg {
-  background-color: #333;
+  background-color: rgb(244, 235, 235);
   color: white;
-  opacity: .75;
+  opacity: .95;
   padding: 1.5rem;
   display: flex;
   flex-direction: column-reverse;
