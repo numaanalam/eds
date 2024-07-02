@@ -1,5 +1,5 @@
 export default function decorate(block){
-  const[bg, fg] = block.children;
-  bg.className="bg";
-  fg.className="fg";
+  const[background, foreground] = block.children;
+  background.className="bg";
+  foreground.className="fg";
 }

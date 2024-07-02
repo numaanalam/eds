@@ -13,7 +13,7 @@
 
 .teaser-wrapper .teaser .fg p,
 .teaser-wrapper .teaser .fg h3 {
-    color: white;
+    color: rgb(247, 241, 241);
 }
 
 
@@ -34,7 +34,8 @@
   flex-direction: column-reverse;
 }
 
-.teaser-wrapper .teaser .bg img {
+/* .teaser-wrapper .teaser .bg img {
   width: 100%;
-  height: 50%;
-}
+  height:fit-content;
+} */
+
