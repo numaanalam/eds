@@ -218,13 +218,6 @@
       },
       {
         "component":"text",
-        "name":"background_imageAlt",
-        "value":"",
-        "label":"Image Alt",
-        "valueType":"string"
-      },
-      {
-        "component":"text",
         "name":"foreground_pretitle",
         "value":"",
         "label":"Pre Title",
@@ -233,21 +226,9 @@
       {
         "component":"text",
         "name":"foreground_title",
-        "value":"",
+        "value":"h3",
         "label":"Title",
         "valueType":"string"
-      },
-      {
-        "component":"select",
-        "name":"foreground_titleType",
-        "value":"h3",
-        "label":"Title Type",
-        "valueType":"string",
-        "options":[
-          {"name":"h2","value":"h2"},
-          {"name":"h3","value":"h3"},
-          {"name":"h4","value":"h4"}
-        ]
       },
       {
         "component":"richtext",
