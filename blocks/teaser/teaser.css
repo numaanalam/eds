@@ -1,4 +1,4 @@
-.teaser_wrapper{
+/* .teaser_wrapper{
   text-align: center;
   background-color: rgb(52, 157, 180);
   position: relative;
@@ -37,4 +37,46 @@
   padding-top: 5%;
   text-align: left;
   color: greenyellow;
+} */
+
+.block.teaser{
+  display: grid;
 }
+
+.block.teaser > div {
+  grid-row: 1;
+  grid-column: 1;
+}
+
+.block.teaser.fg p {
+  margin: 0;
+}
+
+.teaser-wrapper .teaser .fg p,
+.teaser-wrapper .teaser .fg h3 {
+    color: rgb(247, 241, 241);
+}
+
+
+.block.teaser.bg img {
+  display: block;
+  width: 100%;
+  max-height: 400px;
+  height: auto;
+  object-fit: cover;
+}
+
+.block.teaser.fg {
+  background-color: #333;
+  color: white;
+  opacity: .75;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+.teaser-wrapper .teaser .bg img {
+  width: 100%;
+  
+}
+
