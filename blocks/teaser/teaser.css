@@ -1,17 +1,23 @@
 .teaser_wrapper{
   text-align: center;
-  background-color: rgb(78, 194, 220);
+  background-color: rgb(52, 157, 180);
   position: relative;
+}
+
+.teaser_wrapper img{
+  border-radius: 5%;
+  margin-top: 10%;
+  opacity: .85;
+  
 }
 
 .teaser_content{
   padding: 20px;
-  text-align: left;
+  text-align: center;
 }
 
-.teaser_content h2,
-.teaser_content h3,
-.teaser_content h4 {
+
+.teaser_content h3{
   margin: 0;
   margin-bottom: 20px;
   color: greenyellow;

@@ -5,10 +5,7 @@ export default function decorateTeaser(block) {
     const backgroundImageEl = backgroundContainer.querySelector('picture');
     const backgroundImageAltEl = backgroundContainer.querySelector('img');
 
-    // const preTitleEl = foregroundContainer.querySelector('p');
     const titleEl = foregroundContainer.querySelector('h3');
-    // const descriptionEl = foregroundContainer.querySelector('p');
-
     const [preTitleEl, descriptionEl] = foregroundContainer.querySelectorAll('p');
 
     const backgroundImg = backgroundImageEl?.querySelector('img');
@@ -17,10 +14,6 @@ export default function decorateTeaser(block) {
       backgroundImg.removeAttribute('height');
       const alt = backgroundImageAltEl?.getAttribute('alt') || 'image';
       backgroundImg.setAttribute('alt', alt);
-      // backgroundImg.style.width = '100%';
-      // backgroundImg.style.height = '50%';
-      // backgroundImg.style.objectFit = 'cover';
-      // backgroundImg.style.opacity = '0.75';
     }
 
     const pretitle = preTitleEl?.textContent.trim();
@@ -38,9 +31,10 @@ export default function decorateTeaser(block) {
   const teaserData = getTeaserData(block);
   const teaserHtml = `
     <div class="teaser_wrapper">
+    ${teaserData.pretitle ? `<p>${teaserData.pretitle}</p>` : ''}
       ${teaserData.backgroundImg ? teaserData.backgroundImg.outerHTML : ''}
       <div class="teaser_content">
-        ${teaserData.pretitle ? `<p>${teaserData.pretitle}</p>` : ''}
+      
         ${teaserData.title ? `<h3>${teaserData.title}</h3>` : ''}
         ${teaserData.description ? `${teaserData.description}` : ''}
       </div>
