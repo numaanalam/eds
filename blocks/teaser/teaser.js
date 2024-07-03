@@ -33,7 +33,7 @@ export default function decorateTeaser(block) {
 
 
       <div class="teaser_content">
-        ${teaserData.title ? `<h3>${teaserData.title}</h3>` : ''}
+        ${teaserData.title ? `${teaserData.title}` : ''}
         ${teaserData.description ? `${teaserData.description}` : ''}
       </div>
 
