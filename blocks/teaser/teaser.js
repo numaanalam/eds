@@ -9,12 +9,12 @@ export default function decorateTeaser(block) {
     const [preTitleEl, descriptionEl] = foregroundContainer.querySelectorAll('p');
 
     const backgroundImg = backgroundImageEl?.querySelector('img');
-    if (backgroundImg) {
-      backgroundImg.removeAttribute('width');
-      backgroundImg.removeAttribute('height');
-      const alt = backgroundImageAltEl?.getAttribute('alt') || 'image';
-      backgroundImg.setAttribute('alt', alt);
-    }
+    // if (backgroundImg) {
+    //   backgroundImg.removeAttribute('width');
+    //   backgroundImg.removeAttribute('height');
+    //   const alt = backgroundImageAltEl?.getAttribute('alt') || 'image';
+    //   backgroundImg.setAttribute('alt', alt);
+    // }
 
     const pretitle = preTitleEl?.textContent.trim();
     const title = titleEl?.textContent.trim();
