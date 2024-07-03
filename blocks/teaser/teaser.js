@@ -7,7 +7,7 @@ export default function decorateTeaser(block) {
 
     const preTitleEl = foregroundContainer.querySelector('p');
     const titleEl = foregroundContainer.querySelector('h3');
-    const descriptionEl = foregroundContainer.querySelector('.description');
+    const descriptionEl = foregroundContainer.querySelector('description');
 
     const backgroundImg = backgroundImageEl?.querySelector('img');
     if (backgroundImg) {
@@ -15,10 +15,10 @@ export default function decorateTeaser(block) {
       backgroundImg.removeAttribute('height');
       const alt = backgroundImageAltEl?.getAttribute('alt') || 'image';
       backgroundImg.setAttribute('alt', alt);
-      backgroundImg.style.width = '100%';
-      backgroundImg.style.height = '50%';
-      backgroundImg.style.objectFit = 'cover';
-      backgroundImg.style.opacity = '0.75';
+      // backgroundImg.style.width = '100%';
+      // backgroundImg.style.height = '50%';
+      // backgroundImg.style.objectFit = 'cover';
+      // backgroundImg.style.opacity = '0.75';
     }
 
     const pretitle = preTitleEl?.textContent.trim();
