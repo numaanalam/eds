@@ -1,56 +1,52 @@
-// export default function decorateTeaser(block) {
-//   function getTeaserData(block) {
-//     const [backgroundContainer, foregroundContainer] = block.children;
+export default function decorateTeaser(block) {
+  function getTeaserData(block) {
+    const [backgroundContainer, foregroundContainer] = block.children;
 
-//     const backgroundImageEl = backgroundContainer.querySelector('picture');
-//     const backgroundImageAltEl = backgroundContainer.querySelector('img');
+    const backgroundImageEl = backgroundContainer.querySelector('picture');
+    const backgroundImageAltEl = backgroundContainer.querySelector('img');
 
-//     const titleEl = foregroundContainer.querySelector('h3');
+    const titleEl = foregroundContainer.querySelector('h3');
 
-//     const [
-//       preTitleEl,
-//       descriptionEl
-//     ] = foregroundContainer.querySelectorAll('p');
+    const [
+      preTitleEl,
+      descriptionEl
+    ] = foregroundContainer.querySelectorAll('p');
 
-//     const backgroundImg = backgroundImageEl?.querySelector('img');
-//     const pretitle = preTitleEl?.textContent.trim();
-//     const title = titleEl?.textContent.trim();
-//     const description = Array.from(descriptionEl ? [descriptionEl] : []).map((p) => p.outerHTML).join('');
+    const backgroundImg = backgroundImageEl?.querySelector('img');
+    const pretitle = preTitleEl?.textContent.trim();
+    const title = titleEl?.textContent.trim();
+    const description = Array.from(descriptionEl ? [descriptionEl] : []).map((p) => p.outerHTML).join('');
 
-//     return {
-//       backgroundImg,
-//       pretitle,
-//       title,
-//       description
-//     };
-//   }
+    return {
+      backgroundImg,
+      pretitle,
+      title,
+      description
+    };
+  }
 
-//   const teaserData = getTeaserData(block);
-//   const teaserHtml = `
-//     <div class="teaser_wrapper">
-//     ${teaserData.pretitle ? `<p>${teaserData.pretitle}</p>` : ''}
-//       ${teaserData.backgroundImg ? teaserData.backgroundImg.outerHTML : ''}
+  const teaserData = getTeaserData(block);
+  const teaserHtml = `
+    <div class="teaser_wrapper">
+    ${teaserData.pretitle ? `<p>${teaserData.pretitle}</p>` : ''}
+      ${teaserData.backgroundImg ? teaserData.backgroundImg.outerHTML : ''}
 
 
-//       <div class="teaser_content">
-//         ${teaserData.title ? `<h3>${teaserData.title}</h3>` : ''}
-//         ${teaserData.description ? `${teaserData.description}` : ''}
-//       </div>
+      <div class="teaser_content">
+        ${teaserData.title ? `<h3>${teaserData.title}</h3>` : ''}
+        ${teaserData.description ? `${teaserData.description}` : ''}
+      </div>
 
-//     </div>
-//   `;
+    </div>
+  `;
 
-//   block.innerHTML = teaserHtml;
-// }
-
-// document.addEventListener('DOMContentLoaded', () => {
-//   const teaserBlock = document.querySelector('.block.teaser');
-//   if (teaserBlock) {
-//     decorateTeaser(teaserBlock);
-//   }
-// });
-export default function decorate(block) {
-  const [background, foreground] = block.children;
-  background.className = "bg";
-  foreground.className = "fg";
+  block.innerHTML = teaserHtml;
 }
+
+document.addEventListener('DOMContentLoaded', () => {
+  const teaserBlock = document.querySelector('.block.teaser');
+  if (teaserBlock) {
+    decorateTeaser(teaserBlock);
+  }
+});
+
