@@ -1,47 +1,46 @@
 export default function decorateTeaser(block) {
-  function getTeaserData(block) {
-    const [backgroundContainer, foregroundContainer] = block.children;
+  function extractTeaserData(block) {
+    const [backgroundSection, foregroundSection] = block.children;
 
-    const backgroundImageEl = backgroundContainer.querySelector('picture');
-    const backgroundImageAltEl = backgroundContainer.querySelector('img');
+    const pictureElement = backgroundSection.querySelector('picture');
+    const imageElement = pictureElement?.querySelector('img');
+    const altTextElement = backgroundSection.querySelector('img');
 
-    const titleEl = foregroundContainer.querySelector('h3');
-    const [preTitleEl, descriptionEl] = foregroundContainer.querySelectorAll('p');
+    const headingElement = foregroundSection.querySelector('h3');
+    const [preTitleElement, descriptionElement] = foregroundSection.querySelectorAll('p');
 
-    const backgroundImg = backgroundImageEl?.querySelector('img');
-    if (backgroundImg) {
-      backgroundImg.removeAttribute('width');
-      backgroundImg.removeAttribute('height');
-      const alt = backgroundImageAltEl?.getAttribute('alt') || 'image';
-      backgroundImg.setAttribute('alt', alt);
+    if (imageElement) {
+      imageElement.removeAttribute('width');
+      imageElement.removeAttribute('height');
+      const altText = altTextElement?.getAttribute('alt') || 'image';
+      imageElement.setAttribute('alt', altText);
     }
 
-    const pretitle = preTitleEl?.textContent.trim();
-    const title = titleEl?.textContent.trim();
-    const description = Array.from(descriptionEl ? [descriptionEl] : []).map((p) => p.outerHTML).join('');
+    const preTitleText = preTitleElement?.textContent.trim();
+    const titleText = headingElement?.textContent.trim();
+    const descriptionHTML = descriptionElement ? descriptionElement.outerHTML : '';
 
     return {
-      backgroundImg,
-      pretitle,
-      title,
-      description
+      imageElement,
+      preTitleText,
+      titleText,
+      descriptionHTML
     };
   }
 
-  const teaserData = getTeaserData(block);
-  const teaserHtml = `
-    <div class="teaser_wrapper">
-    ${teaserData.pretitle ? `<p>${teaserData.pretitle}</p>` : ''}
-      ${teaserData.backgroundImg ? teaserData.backgroundImg.outerHTML : ''}
-      <div class="teaser_content">
-      
-        ${teaserData.title ? `<h3>${teaserData.title}</h3>` : ''}
-        ${teaserData.description ? `${teaserData.description}` : ''}
+  const teaserData = extractTeaserData(block);
+  const teaserMarkup = `
+    <div class="teaser-wrapper">
+      ${teaserData.preTitleText ? `<p>${teaserData.preTitleText}</p>` : ''}
+      ${teaserData.imageElement ? teaserData.imageElement.outerHTML : ''}
+      <div class="teaser-content">
+        ${teaserData.titleText ? `<h3>${teaserData.titleText}</h3>` : ''}
+        ${teaserData.descriptionHTML}
       </div>
     </div>
   `;
 
-  block.innerHTML = teaserHtml;
+  block.innerHTML = teaserMarkup;
 }
 
 document.addEventListener('DOMContentLoaded', () => {

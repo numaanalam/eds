@@ -6,7 +6,7 @@
 
 .teaser_wrapper img{
   border-radius: 5%;
-  margin-top: 10%;
+  margin-top: 2%;
   opacity: .85;
   
 }
@@ -27,5 +27,12 @@
 .teaser_content p{
   margin: 0;
   margin-bottom: 10px;
+  color: greenyellow;
+}
+
+
+.teaser_wrapper p{
+  padding-top: 5%;
+  text-align: left;
   color: greenyellow;
 }
