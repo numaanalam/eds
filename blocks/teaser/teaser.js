@@ -7,7 +7,7 @@ export default function decorateTeaser(block) {
 
     const preTitleEl = foregroundContainer.querySelector('p');
     const titleEl = foregroundContainer.querySelector('h3');
-    const descriptionEl = foregroundContainer.querySelector('description');
+    const descriptionEl = foregroundContainer.querySelector('p');
 
     const backgroundImg = backgroundImageEl?.querySelector('img');
     if (backgroundImg) {
