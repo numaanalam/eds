@@ -1,9 +1,9 @@
-export default function decorateTeaser(block) {
+export default function decorate(block) {
   function getTeaserData(block) {
     const [backgroundContainer, foregroundContainer] = block.children;
 
     const backgroundImageEl = backgroundContainer.querySelector('picture');
-    const backgroundImageAltEl = backgroundContainer.querySelector('img');
+    // const backgroundImageAltEl = backgroundContainer.querySelector('img');
 
     const titleEl = foregroundContainer.querySelector('h3');
 
@@ -43,10 +43,10 @@ export default function decorateTeaser(block) {
   block.innerHTML = teaserHtml;
 }
 
-document.addEventListener('DOMContentLoaded', () => {
-  const teaserBlock = document.querySelector('.block.teaser');
-  if (teaserBlock) {
-    decorateTeaser(teaserBlock);
-  }
-});
+// document.addEventListener('DOMContentLoaded', () => {
+//   const teaserBlock = document.querySelector('.block.teaser');
+//   if (teaserBlock) {
+//     decorateTeaser(teaserBlock);
+//   }
+// });
 
