@@ -3,10 +3,7 @@ export default function decorate(block) {
     const [backgroundContainer, foregroundContainer] = block.children;
 
     const backgroundImageEl = backgroundContainer.querySelector('picture');
-    // const backgroundImageAltEl = backgroundContainer.querySelector('img');
-
     const titleEl = foregroundContainer.querySelector('h3');
-
     const [
       preTitleEl,
       descriptionEl
@@ -30,10 +27,8 @@ export default function decorate(block) {
     <div class="teaser_wrapper">
     ${teaserData.pretitle ? `<p>${teaserData.pretitle}</p>` : ''}
       ${teaserData.backgroundImg ? teaserData.backgroundImg.outerHTML : ''}
-
-
       <div class="teaser_content">
-        ${teaserData.title ? `${teaserData.title}` : ''}
+        ${teaserData.title ? `<h3>${teaserData.title}</h3>` : ''}
         ${teaserData.description ? `${teaserData.description}` : ''}
       </div>
 
@@ -43,10 +38,5 @@ export default function decorate(block) {
   block.innerHTML = teaserHtml;
 }
 
-// document.addEventListener('DOMContentLoaded', () => {
-//   const teaserBlock = document.querySelector('.block.teaser');
-//   if (teaserBlock) {
-//     decorateTeaser(teaserBlock);
-//   }
-// });
+
 
