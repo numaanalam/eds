@@ -50,22 +50,40 @@ export default function decorate(block) {
 
 
 
-  const teaserHtml = utility.sanitizeHtml(` 
-    ${teaserData.pretitle ? `<p>${teaserData.pretitle}</p>` : ''}
-      ${teaserData.backgroundImg ? teaserData.backgroundImg.outerHTML : ''}
-      <div class="teaser_content">
-        ${teaserData.title ? `<h3>${teaserData.title}</h3>` : ''}
-        ${teaserData.description ? `${teaserData.description}` : ''}
-      </div>
-  `);
+  //   const teaserHtml = utility.sanitizeHtml(` 
+  //     ${teaserData.pretitle ? `<p>${teaserData.pretitle}</p>` : ''}
+  //       ${teaserData.backgroundImg ? teaserData.backgroundImg.outerHTML : ''}
+  //       <div class="teaser_content">
+  //         ${teaserData.title ? `<h3>${teaserData.title}</h3>` : ''}
+  //         ${teaserData.description ? `${teaserData.description}` : ''}
+  //       </div>
+  //   `);
 
-  // block.innerHTML = teaserHtml;
+  //   // block.innerHTML = teaserHtml;
+
+  //   block.innerHTML = `
+  //     <div class= "teaser_wrapper">
+  //       ${teaserHtml}
+  //     </div>
+  //  `;
+
+
+  const teaserHtml = utility.sanitizeHtml(`
+  ${teaserData.pretitle ? `<p class="teaser_pretitle">${teaserData.pretitle}</p>` : ''}
+  ${teaserData.backgroundImg ? `<div class="teaser_background">${teaserData.backgroundImg.outerHTML}</div>` : ''}
+  <div class="teaser_content">
+    ${teaserData.title ? `<h3 class="teaser_title">${teaserData.title}</h3>` : ''}
+    ${teaserData.description ? `<div class="teaser_description">${teaserData.description}</div>` : ''}
+  </div>
+`);
 
   block.innerHTML = `
-    <div class= "teaser_wrapper">
-      ${teaserHtml}
-    </div>
- `;
+  <div class="teaser_wrapper">
+    ${teaserHtml}
+  </div>
+`;
+
+
 }
 
 
