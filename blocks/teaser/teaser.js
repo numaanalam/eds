@@ -1,13 +1,17 @@
 export default function decorate(block) {
   function getTeaserData(block) {
-    const [backgroundContainer, foregroundContainer] = block.children;
-
-    const backgroundImageEl = backgroundContainer.querySelector('picture');
-    const titleEl = foregroundContainer.querySelector('h3');
     const [
+      backgroundImageEl,
       preTitleEl,
-      descriptionEl
-    ] = foregroundContainer.querySelectorAll('p');
+      titleEl,
+      descriptionEl,
+    ] = block.children;
+
+    // const image = imageEl?.querySelector('picture');
+    // const title = titleEl?.querySelector('h3');
+    // const pretitle = preTitleEl?.querySelector('p');
+    // const description = descriptionEl?.querySelector('p');
+
 
     const backgroundImg = backgroundImageEl?.querySelector('img');
     const pretitle = preTitleEl?.textContent.trim();
