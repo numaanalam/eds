@@ -1,3 +1,4 @@
+import utility from '../../utility/utility.js';
 export default function decorate(block) {
   function getTeaserData(block) {
     const [
@@ -6,11 +7,6 @@ export default function decorate(block) {
       titleEl,
       descriptionEl,
     ] = block.children;
-
-    // const image = imageEl?.querySelector('picture');
-    // const title = titleEl?.querySelector('h3');
-    // const pretitle = preTitleEl?.querySelector('p');
-    // const description = descriptionEl?.querySelector('p');
 
 
     const backgroundImg = backgroundImageEl?.querySelector('img');
@@ -29,7 +25,24 @@ export default function decorate(block) {
   const teaserData = getTeaserData(block);
 
 
-  const teaserHtml = `
+  // const teaserHtml = `
+  //   <div class="teaser_wrapper">
+  //   ${teaserData.pretitle ? `<p>${teaserData.pretitle}</p>` : ''}
+  //     ${teaserData.backgroundImg ? teaserData.backgroundImg.outerHTML : ''}
+  //     <div class="teaser_content">
+  //       ${teaserData.title ? `<h3>${teaserData.title}</h3>` : ''}
+  //       ${teaserData.description ? `${teaserData.description}` : ''}
+  //     </div>
+
+  //   </div>
+  // `;
+
+  // block.innerHTML = teaserHtml;
+
+
+  //using utility.sanitize()
+
+  const teaserHtml = utility.sanitize(`
     <div class="teaser_wrapper">
     ${teaserData.pretitle ? `<p>${teaserData.pretitle}</p>` : ''}
       ${teaserData.backgroundImg ? teaserData.backgroundImg.outerHTML : ''}
@@ -39,9 +52,12 @@ export default function decorate(block) {
       </div>
 
     </div>
-  `;
+  `);
 
   block.innerHTML = teaserHtml;
+
+
+
 }
 
 
