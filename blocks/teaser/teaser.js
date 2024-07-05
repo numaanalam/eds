@@ -32,30 +32,40 @@ export default function decorate(block) {
 
 
   //   const immersiveTeaserHtml = utility.sanitizeHtml(`
-  //   ${(immersiveTeaser.image) ? immersiveTeaser.image.outerHTML : ''}
-  //    <div class="immersive__content">
-  //      ${(immersiveTeaser.pretitle) ? `<p>${immersiveTeaser.pretitle}</p>` : ''}
-  //      ${(immersiveTeaser.title) ? `${immersiveTeaser.title.outerHTML}` : ''}
-  //      ${(immersiveTeaser.description) ? `${immersiveTeaser.description}` : ''}
-  //      ${(immersiveTeaser.cta) ? `<div class="immersive__action">${immersiveTeaser.cta.outerHTML}</div>` : ''}
-  //     </div>
-  // `);
+  //     ${(immersiveTeaser.image) ? immersiveTeaser.image.outerHTML : ''}
+  //      <div class="immersive__content">
+  //        ${(immersiveTeaser.pretitle) ? `<p>${immersiveTeaser.pretitle}</p>` : ''}
+  //        ${(immersiveTeaser.title) ? `${immersiveTeaser.title.outerHTML}` : ''}
+  //        ${(immersiveTeaser.description) ? `${immersiveTeaser.description}` : ''}
+  //        ${(immersiveTeaser.cta) ? `<div class="immersive__action">${immersiveTeaser.cta.outerHTML}</div>` : ''}
+  //       </div>
+  //   `);
+
+  //   block.innerHTML = `
+  //   <div class="immersive__wrapper right-seperator">
+  //       ${immersiveTeaserHtml}
+  //       ${(teaserObj?.innerHTML) ? teaserObj.outerHTML : ''}
+  //   </div>
+  // `;
 
 
 
-  const teaserHtml = utility.sanitizeHtml(`
-    <div class="teaser_wrapper">
+  const teaserHtml = utility.sanitizeHtml(` 
     ${teaserData.pretitle ? `<p>${teaserData.pretitle}</p>` : ''}
       ${teaserData.backgroundImg ? teaserData.backgroundImg.outerHTML : ''}
       <div class="teaser_content">
         ${teaserData.title ? `<h3>${teaserData.title}</h3>` : ''}
         ${teaserData.description ? `${teaserData.description}` : ''}
       </div>
-
-    </div>
   `);
 
-  block.outerHTML = teaserHtml;
+  // block.innerHTML = teaserHtml;
+
+  block.innerHTML = `
+    <div class= "teaser_wrapper">
+      ${teaserHtml}
+    </div>
+ `;
 }
 
 
