@@ -55,7 +55,7 @@ export default function decorate(block) {
     </div>
   `);
 
-  block.innerHTML = teaserHtml;
+  block.outerHTML = teaserHtml;
 }
 
 
