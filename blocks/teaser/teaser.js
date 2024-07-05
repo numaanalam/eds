@@ -9,6 +9,10 @@ export default function decorate(block) {
       descriptionEl,
     ] = block.children;
 
+    // const image = imageEl?.querySelector('picture');
+    // const title = titleEl?.querySelector('h3');
+    // const pretitle = preTitleEl?.querySelector('p');
+    // const description = descriptionEl?.querySelector('p');
 
 
     const backgroundImg = backgroundImageEl?.querySelector('img');
@@ -41,8 +45,9 @@ export default function decorate(block) {
   block.innerHTML = teaserHtml;
 
 
-  //   //using utility.sanitize method.
-  //   const teaserHtml = utility.sanitizeHtml(`
+  // //using utility.sanitize method.
+
+  // const teaserHtml = utility.sanitizeHtml(`
   // <div class="teaser_wrapper">
   // ${teaserData.pretitle ? `<p>${teaserData.pretitle}</p>` : ''}
   //   ${teaserData.backgroundImg ? teaserData.backgroundImg.outerHTML : ''}
@@ -53,7 +58,7 @@ export default function decorate(block) {
 
   // </div>
   // `);
-  //   block.innerHTML = teaserHtml;
+  // block.innerHTML = teaserHtml;
 
 
 }
