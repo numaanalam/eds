@@ -31,33 +31,33 @@ export default function decorate(block) {
   const teaserData = getTeaserData(block);
 
 
-  // const teaserHtml = `
-  //   <div class="teaser_wrapper">
-  //   ${teaserData.pretitle ? `<p>${teaserData.pretitle}</p>` : ''}
-  //     ${teaserData.backgroundImg ? teaserData.backgroundImg.outerHTML : ''}
-  //     <div class="teaser_content">
-  //       ${teaserData.title ? `<h3>${teaserData.title}</h3>` : ''}
-  //       ${teaserData.description ? `${teaserData.description}` : ''}
-  //     </div>
+  const teaserHtml = `
+    <div class="teaser_wrapper">
+    ${teaserData.pretitle ? `<p>${teaserData.pretitle}</p>` : ''}
+      ${teaserData.backgroundImg ? teaserData.backgroundImg.outerHTML : ''}
+      <div class="teaser_content">
+        ${teaserData.title ? `<h3>${teaserData.title}</h3>` : ''}
+        ${teaserData.description ? `${teaserData.description}` : ''}
+      </div>
 
-  //   </div>
-  // `;
-  // block.innerHTML = teaserHtml;
-
-
-  //using utility.sanitize method.
-  const teaserHtml = utility.sanitizeHtml(`
-<div class="teaser_wrapper">
-${teaserData.pretitle ? `<p>${teaserData.pretitle}</p>` : ''}
-  ${teaserData.backgroundImg ? teaserData.backgroundImg.outerHTML : ''}
-  <div class="teaser_content">
-    ${teaserData.title ? `<h3>${teaserData.title}</h3>` : ''}
-    ${teaserData.description ? `${teaserData.description}` : ''}
-  </div>
-
-</div>
-`);
+    </div>
+  `;
   block.innerHTML = teaserHtml;
+
+
+  //   //using utility.sanitize method.
+  //   const teaserHtml = utility.sanitizeHtml(`
+  // <div class="teaser_wrapper">
+  // ${teaserData.pretitle ? `<p>${teaserData.pretitle}</p>` : ''}
+  //   ${teaserData.backgroundImg ? teaserData.backgroundImg.outerHTML : ''}
+  //   <div class="teaser_content">
+  //     ${teaserData.title ? `<h3>${teaserData.title}</h3>` : ''}
+  //     ${teaserData.description ? `${teaserData.description}` : ''}
+  //   </div>
+
+  // </div>
+  // `);
+  //   block.innerHTML = teaserHtml;
 
 
 }
