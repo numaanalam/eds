@@ -42,7 +42,7 @@ export default function decorate(block) {
 
   //using utility.sanitize()
 
-  const teaserHtml = utility.sanitize(`
+  const teaserHtml = utility.sanitizeHtml(`
     <div class="teaser_wrapper">
     ${teaserData.pretitle ? `<p>${teaserData.pretitle}</p>` : ''}
       ${teaserData.backgroundImg ? teaserData.backgroundImg.outerHTML : ''}
