@@ -1,3 +1,5 @@
+import utility from "../../utility/utility";
+
 export default function decorate(block) {
   function getTeaserData(block) {
     const [
@@ -27,7 +29,21 @@ export default function decorate(block) {
   }
 
   const teaserData = getTeaserData(block);
-  const teaserHtml = `
+
+
+  //   const immersiveTeaserHtml = utility.sanitizeHtml(`
+  //   ${(immersiveTeaser.image) ? immersiveTeaser.image.outerHTML : ''}
+  //    <div class="immersive__content">
+  //      ${(immersiveTeaser.pretitle) ? `<p>${immersiveTeaser.pretitle}</p>` : ''}
+  //      ${(immersiveTeaser.title) ? `${immersiveTeaser.title.outerHTML}` : ''}
+  //      ${(immersiveTeaser.description) ? `${immersiveTeaser.description}` : ''}
+  //      ${(immersiveTeaser.cta) ? `<div class="immersive__action">${immersiveTeaser.cta.outerHTML}</div>` : ''}
+  //     </div>
+  // `);
+
+
+
+  const teaserHtml = utility.sanitizeHtml(`
     <div class="teaser_wrapper">
     ${teaserData.pretitle ? `<p>${teaserData.pretitle}</p>` : ''}
       ${teaserData.backgroundImg ? teaserData.backgroundImg.outerHTML : ''}
@@ -37,7 +53,7 @@ export default function decorate(block) {
       </div>
 
     </div>
-  `;
+  `);
 
   block.innerHTML = teaserHtml;
 }
