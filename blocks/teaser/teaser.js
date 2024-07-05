@@ -77,7 +77,7 @@ export default function decorate(block) {
   </div>
 `);
 
-  block.innerHTML = `
+  block.outerHTML = `
   <div class="teaser_wrapper">
     ${teaserHtml}
   </div>
