@@ -55,12 +55,12 @@ export default function decorate(block) {
       <input type="text" id="input1" name="input1" placeholder="${FormData.placeholder1}">
 
       
-      <input type="text" id="input2" name="input2" placeholder="Enter second value">
+      <input type="text" id="input2" name="input2" placeholder="${FormData.placeholder2}">
 
     
-      <input type="text" id="input3" name="input3" placeholder="Enter third value">
+      <input type="text" id="input3" name="input3" placeholder="${FormData.placeholder3}">
 
-      <button type="button" class="search-button" onclick="handleSearch()">Search</button>
+      <button type="button" class="search-button" onclick="handleSearch()">Sear</button>
       <button type="reset" class="clear-button">Clear</button>
   </form>
 </div>
