@@ -31,30 +31,13 @@ export default function decorate(block) {
   const teaserData = getFormData(block);
 
 
-  // const teaserHtml = `
-  //   <div class="teaser_wrapper">
-  //   ${teaserData.pretitle ? `<p>${teaserData.pretitle}</p>` : ''}
-  //     ${teaserData.backgroundImg ? teaserData.backgroundImg.outerHTML : ''}
-  //     <div class="teaser_content">
-  //       ${teaserData.title ? `<h3>${teaserData.title}</h3>` : ''}
-  //       ${teaserData.description ? `${teaserData.description}` : ''}
-  //     </div>
 
-  //   </div>
-  // `;
+  const searchButton = document.createElement("button");
+  searchButton.id = "logoutButton";
+  searchButton.className = "search-button";
+  searchButton.textContent = button1;
 
-  // block.innerHTML = teaserHtml;
-
-
-  //using utility.sanitize()
-
-  function createSearchButton() {
-    const searchButton = document.createElement("button");
-    searchButton.id = "logoutButton";
-    searchButton.className = "search-button";
-    searchButton.textContent = button1;
-    return searchButton;
-  }
+  block.appendChild(searchButton);
 
 
 
@@ -67,8 +50,8 @@ export default function decorate(block) {
   block.innerHTML = formHtml;
 
 
-  const searchButton = createSearchButton();
-  block.appendChild(searchButton);
+
+
 
 
 
