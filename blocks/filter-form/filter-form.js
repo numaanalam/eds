@@ -33,7 +33,7 @@ export default function decorate(block) {
 
   const formHtml = utility.sanitizeHtml(`
   <div class="teaser_wrapper">
-  ${formData.pretitle ? `<p>${formData.placeholder1}</p>` : ''}
+  ${formData.pretitle ? `<p>kdjkdkfj;fd</p>` : ''}
    
   </div>
 `);
