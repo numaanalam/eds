@@ -49,13 +49,9 @@ export default function decorate(block) {
   //using utility.sanitize()
 
   const formHtml = utility.sanitizeHtml(`
-  
-  <form>
-  <label for="fname">First name:</label><br>
-  <input type="text" id="fname" name="fname"><br>
-  <label for="lname">Last name:</label><br>
-  <input type="text" id="lname" name="lname">
-</form>
+  <div>
+      <p>jnhn</p>
+      </div>
   `);
 
   block.innerHTML = formHtml;
