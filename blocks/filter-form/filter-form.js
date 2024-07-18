@@ -48,13 +48,28 @@ export default function decorate(block) {
 
   //using utility.sanitize()
 
+  function createSearchButton() {
+    const searchButton = document.createElement("button");
+    searchButton.id = "logoutButton";
+    searchButton.className = "search-button";
+    searchButton.textContent = button1;
+    return searchButton;
+  }
+
+
+
   const formHtml = utility.sanitizeHtml(`
   <div>
-      <p>jnhn</p>
+      
       </div>
   `);
 
   block.innerHTML = formHtml;
+
+
+  const searchButton = createSearchButton();
+  block.appendChild(searchButton);
+
 
 
 
