@@ -1,6 +1,6 @@
 import utility from '../../utility/utility.js';
 export default function decorate(block) {
-  function getformData(block) {
+  function getFormData(block) {
     const [
       placeholder1El,
       placeholder2El,
@@ -28,26 +28,20 @@ export default function decorate(block) {
     };
   }
 
-  const teaserData = getFormData(block);
+
+  const formData = getFormData(block);
+
+  const formHtml = utility.sanitizeHtml(`
+  <div class="teaser_wrapper">
+  ${formData.pretitle ? `<p>${formData.placeholder1}</p>` : ''}
+   
+  </div>
+`);
+
+  block.innerHTML = teaserHtml;
 
 
 
-  const searchButton = document.createElement("button");
-  searchButton.id = "logoutButton";
-  searchButton.className = "search-button";
-  searchButton.textContent = button1;
-
-  block.appendChild(searchButton);
-
-
-
-  // const formHtml = utility.sanitizeHtml(`
-  // <div>
-
-  //     </div>
-  // `);
-
-  // block.innerHTML = formHtml;
 
 
 
