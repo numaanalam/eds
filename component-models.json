@@ -262,6 +262,20 @@
         "value":"",
         "label":"Placeholder3",
         "valueType":"string"
+      },
+      {
+        "component":"text",
+        "name":"button1",
+        "value":"",
+        "label":"Button1",
+        "valueType":"string"
+      },
+      {
+        "component":"text",
+        "name":"button2",
+        "value":"",
+        "label":"Button2",
+        "valueType":"string"
       }
     
     ]
