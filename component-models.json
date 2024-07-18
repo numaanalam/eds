@@ -240,24 +240,30 @@
     ]
   },
   {
-    "id": "profile",
+    "id": "filter-form",
     "fields": [
       {
-        "component": "reference",
-        "valueType": "string",
-        "name": "image",
-        "label": "Image",
-        "multi": true
-      
+        "component":"text",
+        "name":"placeholder1",
+        "value":"",
+        "label":"Placeholder1",
+        "valueType":"string"
       },
       {
-        "component": "text",
-        "valueType": "string",
-        "name": "imageAlt",
-        "label": "Alt",
-        "value": "",
-        "placeholder":"hello"
+        "component":"text",
+        "name":"placeholder2",
+        "value":"",
+        "label":"Placeholder2",
+        "valueType":"string"
+      },
+      {
+        "component":"text",
+        "name":"placeholder3",
+        "value":"",
+        "label":"Placeholder3",
+        "valueType":"string"
       }
+    
     ]
   } 
 ]
