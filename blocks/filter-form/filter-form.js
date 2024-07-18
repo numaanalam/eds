@@ -51,6 +51,7 @@ export default function decorate(block) {
   const formHtml = utility.sanitizeHtml(`
   <div class="form-container">
   <form id="exampleForm">
+  <input type="text" id="lname" name="lname">
      
       <input type="text" id="input1" name="input1" placeholder="${FormData.placeholder1}">
 
