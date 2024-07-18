@@ -49,22 +49,37 @@ export default function decorate(block) {
   //using utility.sanitize()
 
   const formHtml = utility.sanitizeHtml(`
-  <div class="form-container">
-  <form id="exampleForm">
-  <input type="text" id="lname" name="lname">
-     
-      <input type="text" id="input1" name="input1" placeholder="${FormData.placeholder1}">
+  <form class="cd_form" id="filter_form" novalidate="novalidate">
+            <div class="row">
+                <div class="col-sm-6 col-md-3 form-group">
+                    <input type="text" onkeypress="return event.charCode >= 48 &amp;&amp; event.charCode <= 57" data-error="Please enter valid Number" class="form-control mobileNumber is-valid" name="mobileNumber" maxlength="10" placeholder=${FormData.placeholder1} id="mobileNumber" tabindex="7" aria-invalid="false">
+                </div>
 
-      
-      <input type="text" id="input2" name="input2" placeholder="${FormData.placeholder2}">
+                <div class="col-sm-6 col-md-3 form-group">
+                    <input type="text" onkeypress="return event.charCode >= 97 &amp;&amp; event.charCode <= 122 || event.charCode >= 65 &amp;&amp; event.charCode <= 90 || event.charCode >= 48 &amp;&amp; event.charCode <= 57" class="form-control" placeholder="Booking ID" id="bookingID" tabindex="8">
+                </div>
 
-    
-      <input type="text" id="input3" name="input3" placeholder="${FormData.placeholder3}">
+                <div class="col-sm-6 col-md-3 form-group">
+                    <input type="text" onkeypress="return event.charCode >= 97 &amp;&amp; event.charCode <= 122 || event.charCode >= 65 &amp;&amp; event.charCode <= 90 || event.charCode >= 48 &amp;&amp; event.charCode <= 57" class="form-control" placeholder="DMS Enquiry" id="enquiryId" tabindex="9">
+                </div>
 
-      <button type="button" class="search-button" onclick="handleSearch()">Sear</button>
-      <button type="reset" class="clear-button">Clear</button>
-  </form>
-</div>
+                <div class="col-sm-6 col-md-3 form-group">
+                    <button type="button" class="btn btn-dealer" id="dealer_filter_search">
+                        Search
+                    </button>
+                    <button type="button" class="btn btn-dealer clear_new_finance" style="display: inline-block;">
+                        Clear All
+                    </button>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-sm-12">
+
+                </div>
+
+            </div>
+        </form>
 
   `);
 
