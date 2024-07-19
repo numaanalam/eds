@@ -244,39 +244,12 @@
     "fields": [
       {
         "component":"text",
-        "name":"placeholder1",
+        "name":"title",
         "value":"",
-        "label":"Placeholder1",
+        "label":"Title",
         "valueType":"string"
       },
-      {
-        "component":"text",
-        "name":"placeholder2",
-        "value":"",
-        "label":"Placeholder2",
-        "valueType":"string"
-      },
-      {
-        "component":"text",
-        "name":"placeholder3",
-        "value":"",
-        "label":"Placeholder3",
-        "valueType":"string"
-      },
-      {
-        "component":"text",
-        "name":"button1",
-        "value":"",
-        "label":"Button1",
-        "valueType":"string"
-      },
-      {
-        "component":"text",
-        "name":"button2",
-        "value":"",
-        "label":"Button2",
-        "valueType":"string"
-      },
+      
       {
         "component": "select",
         "label": "Theme",
