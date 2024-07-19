@@ -4,12 +4,22 @@ export default async function decorate(block) {
 
   const [titleEl, themeEl] = block.children;
 
-  const {
-    mobile,
-    bookingId
-  } = await fetchPlaceholders();
+  // const {
+  //   mobile,
+  //   bookingId
+  // } = await fetchPlaceholders();
 
+  // console.log(bookingId);
+
+  const placeholders = await fetchPlaceholders();
+  console.log('Placeholders fetched:', placeholders);
+
+  const { mobile, bookingId, key } = placeholders;
+
+  // Log specific placeholders to verify their values
+  console.log(mobile);
   console.log(bookingId);
+  console.log(key);
 
   const title = titleEl?.textContent.trim();
 
