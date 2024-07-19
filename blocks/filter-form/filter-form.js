@@ -1,12 +1,14 @@
 
-export default function decorate(block) {
+import { fetchPlaceholders } from '../../scripts/aem.js';
+export default async function decorate(block) {
 
   const [titleEl, themeEl] = block.children;
 
+  const {
+    mobile
+  } = await fetchPlaceholders();
+
   const title = titleEl?.textContent.trim();
-
-
-
 
   const formHtml = `
   <div class="New">
@@ -17,7 +19,7 @@ export default function decorate(block) {
 
 
   const placeholder1 = document.createElement("input");
-  placeholder1.placeholder = "Mobile no.";
+  placeholder1.placeholder = mobile;
   block.appendChild(placeholder1);
 
   const placeholder2 = document.createElement("input");
