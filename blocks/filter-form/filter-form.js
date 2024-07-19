@@ -9,11 +9,20 @@ export default async function decorate(block) {
     bookingId
   } = await fetchPlaceholders();
 
+  console.log(bookingId);
+
   const title = titleEl?.textContent.trim();
 
   const formHtml = `
   <div class="New">
    <p>${title}</p>  
+   <div class="col-xs-6 col-md-3 form-group">
+                        <input type="text"
+                            onkeypress="return event.charCode >= 97 &amp;&amp; event.charCode <= 122 || event.charCode >= 65 &amp;&amp; event.charCode <= 90 || event.charCode >= 48 &amp;&amp; event.charCode <= 57"
+                            class="form-control is-invalid" placeholder="${bookingId}" id="bookingID" tabindex="2">
+
+                    </div>
+
   </div>
 `;
   block.innerHTML = formHtml;
