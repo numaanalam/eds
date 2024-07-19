@@ -5,7 +5,8 @@ export default async function decorate(block) {
   const [titleEl, themeEl] = block.children;
 
   const {
-    mobile
+    mobile,
+    bookingId
   } = await fetchPlaceholders();
 
   const title = titleEl?.textContent.trim();
@@ -23,7 +24,7 @@ export default async function decorate(block) {
   block.appendChild(placeholder1);
 
   const placeholder2 = document.createElement("input");
-  placeholder2.placeholder = "Booking ID";
+  placeholder2.placeholder = bookingId;
   block.appendChild(placeholder2);
 
   const placeholder3 = document.createElement("input");
