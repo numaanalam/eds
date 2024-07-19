@@ -276,7 +276,23 @@
         "value":"",
         "label":"Button2",
         "valueType":"string"
+      },
+      {
+        "id": "select",
+        "fields": [
+          {
+            "component": "select",
+            "label": "Theme",
+            "name": "theme",
+            "valueType": "string",
+            "options": [
+              { "name": "Theme 1", "value": "theme1" },
+              { "name": "Theme 2", "value": "theme2" }
+            ]
+          }
+        ]
       }
+      
     
     ]
   } 
