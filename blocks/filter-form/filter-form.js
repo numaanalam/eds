@@ -1,13 +1,16 @@
 
 export default function decorate(block) {
 
+  const [titleEl, themeEl] = block.children;
+
+  const title = titleEl?.textContent.trim();
 
 
 
 
   const formHtml = `
   <div class="New">
-   <p>New Finance Journey</p>  
+   <p>${title}</p>  
   </div>
 `;
   block.innerHTML = formHtml;
